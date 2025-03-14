@@ -1,0 +1,12 @@
+name = "AZM Miclic";
+picture = "";
+actionName = "Website";
+action = "https://github.com/alezm00";
+description = "";
+logo = "";
+logoOver = "";
+tooltip = "AZM MICLIC";
+tooltipOwned = "";
+overview = "mhhh wonder what this is";
+author = "Alezm";
+overviewPicture = "";
