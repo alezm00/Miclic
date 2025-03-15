@@ -1,72 +1,52 @@
+
+#define ACTIONS class ACE_SelfActions { \
+            class AZM_Miclic_actions { \
+                displayName = "Miclic"; \
+                condition = "[] call AZM_miclic_actionCondition_main"; \
+                exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"}; \
+                modifierFunction = "call AZM_miclic_actionCondition_canDeployModifier"; \
+                statement = "true;"; \
+                icon = ""; \
+                showDisabled = 0; \
+                class AZM_Miclic_deploy { \
+                    displayName = "Deploy MICLIC"; \
+                    condition = "[] call AZM_miclic_actionCondition_canDeploy"; \
+                    icon = ""; \
+                    statement = "[] call AZM_miclic_prepareLaunch"; \
+                    showDisabled = 0; \
+                }; \
+                class AZM_Miclic_Detonate { \
+                    displayName = "Detonate MICLIC"; \
+                    condition = "[] call AZM_miclic_actionCondition_canDetonate"; \
+                    icon = ""; \
+                    statement = "[] spawn AZM_miclic_detonate"; \
+                    showDisabled = 0; \
+                }; \
+                class AZM_Miclic_cut { \
+                    displayName = "Cut MICLIC"; \
+                    condition = "[] call AZM_miclic_actionCondition_canCut"; \
+                    icon = ""; \
+                    statement = "[] call AZM_miclic_cut"; \
+                    showDisabled = 0; \
+                }; \
+            }; \
+        }; \
+
+
 class CfgVehicles {
-    class Man;
-    class CAManBase: Man {
-        class ACE_SelfActions {
-            class ACE_Equipment {
-                class azm_bft_main {
-                    displayName = "Blue Force Tracking";
-                    // condition = "true";
-                    condition = "('azm_bft_rx' in items _player) || ('azm_bft_tx' in items _player)";
-                    exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = "true;";
-                    icon = "";
-                    showDisabled = 0;
 
-                    class azm_bft_tx {
-                        displayName = "TX";
-                        condition = "('azm_bft_tx' in items _player)";
-                        exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                        statement = "true;";
-                        showDisabled = 0;
-                        icon = "\azm_bft\data\img\items\tx.paa";
+    //["All","AllVehicles","Land","LandVehicle","Tank","Tank_F","APC_Tracked_01_base_F","B_APC_Tracked_01_base_F"]
 
-                        class azm_bft_startTX {
-                            displayName = "Start transmitting";
-                            condition = "!AZMBFT_isTransmitting";
-                            exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                            statement = "[] spawn AZMBFT_UI_transmittingOpen;";
-                            icon = "";
-                            showDisabled = 0;
-                        };
-                        class azm_bft_stopTX {
-                            displayName = "Stop transmitting";
-                            condition = "AZMBFT_isTransmitting";
-                            exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                            statement = "[] call AZMBFT_stopTransmitting;";
-                            icon = "";
-                            showDisabled = 0;
-                        };
-                    };
-
-
-
-                    class azm_bft_rx {
-                        displayName = "RX";
-                        condition = "('azm_bft_rx' in items _player)";
-                        exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                        statement = "true;";
-                        showDisabled = 0;
-                        icon = "\azm_bft\data\img\items\txRX.paa";
-
-                        class azm_bft_startRX {
-                            displayName = "Start receiving";
-                            condition = "!AZMBFT_isReceiving";
-                            exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                            statement = "[] spawn AZMBFT_UI_receivingOpen;";
-                            icon = "";
-                            showDisabled = 0;
-                        };
-                        class azm_bft_stopRX {
-                            displayName = "Stop receiving";
-                            condition = "AZMBFT_isReceiving";
-                            exceptions[] =  {"isNotDragging", "isNotSwimming", "notOnMap", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                            statement = "[] call AZMBFT_stopReceiving;";
-                            icon = "";
-                            showDisabled = 0;
-                        };
-                    };
-                };
-            };
-        };
+    // class Land;
+    class LandVehicle;
+    class Tank: LandVehicle {
+        ACTIONS
     };
 };
+
+
+
+
+
+
+

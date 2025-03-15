@@ -14,6 +14,6 @@ class CfgPatches {
 
 
 #include "CfgEventHandlers.hpp"
+#include "CfgMiclic.hpp"
 #include "CfgVehicles.hpp"
-
 
