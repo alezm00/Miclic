@@ -1,5 +1,5 @@
 class CfgPatches {
-    class azm_bft {
+    class azm_miclic {
         author = "Alezm";
         name = "AZM Miclic";
         url = "";

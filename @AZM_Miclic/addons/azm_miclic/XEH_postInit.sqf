@@ -1,7 +1,7 @@
 
 
-missionNamespace setVariable ["AZM_miclic_var_ropeAddSafety", getNumber (missionConfigFile >> "AZM_miclic_config" >> "ropeAddSafety")];
-missionNamespace setVariable ["AZM_miclic_var_explosionSpeed", getNumber (missionConfigFile >> "AZM_miclic_config" >> "explosionSpeed")];
+missionNamespace setVariable ["AZM_miclic_var_ropeAddSafety", getNumber (ConfigFile >> "AZM_miclic_config" >> "ropeAddSafety")];
+missionNamespace setVariable ["AZM_miclic_var_explosionSpeed", getNumber (ConfigFile >> "AZM_miclic_config" >> "explosionSpeed")];
 
 
 

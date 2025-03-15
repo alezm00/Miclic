@@ -42,6 +42,29 @@ class CfgVehicles {
     class Tank: LandVehicle {
         ACTIONS
     };
+    class Car: LandVehicle {
+        ACTIONS
+    };
+
+
+    // // ["All","Thing","ThingX","ReammoBox_F","Land_RepairDepot_01_base_F"]
+    // class Thing;
+    // class ThingX: Thing {};
+    // class ReammoBox_F: ThingX {};
+    // class Land_RepairDepot_01_base_F: ReammoBox_F {
+    //     class ACE_Actions {
+    //         class ACE_MainActions: ACE_MainActions {
+    //             class AZM_Miclic_cut {
+    //                 displayName = "Rearm Miclic";
+    //                 distance = 5;
+    //                 condition = "call AZM_miclic_rearmCondition";
+    //                 statement = "call AZM_miclic_rearmAction";
+    //             };
+    //         };
+    //     };
+    // };
+
+
 };
 
 

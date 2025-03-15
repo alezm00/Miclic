@@ -10,7 +10,7 @@ AZM_miclic_Light = {
 AZM_miclic_WallHandler = {
     params [
         ["_pos",[0,0,0],[[]]],
-        ["_range",20,[0]]
+        ["_range",15,[0]]
     ];
 
     _walls = nearestTerrainObjects [_pos,["FENCE","WALL","TREE", "SMALL TREE", "BUSH"],_range];
@@ -32,9 +32,9 @@ AZM_miclic_getVehicleConfig = {
 	if ((typename _vehicle) == "OBJECT") then {
 		_vehicle = typeOf _vehicle;
 	};
-	if (_vehicle == "") exitWith {["Error missing input"] call AZM_miclic_hint;};
+	if (_vehicle == "") exitWith {["Error missing input 0000x1"] call AZM_miclic_hint; false};
 	_config = "configName _x == _vehicle" configClasses (configFile >> "AZM_miclic_config" >> "AZM_miclic_vehiclesClasses"); //TODO replace configFile to configFile
-	if (count _config == 0) exitWith {["Error not found"] call AZM_miclic_hint;};
+	if (count _config == 0) exitWith {["Error not found 0000x7"] call AZM_miclic_hint; false};
 
 	[
 		getArray((_config select 0) >> "ropeStartPosition"),
