@@ -12,3 +12,5 @@ _vehiclesClassLists = _vehiclesClassLists apply {
 };
 missionNamespace setVariable ["AZM_miclic_var_vehiclesClassLists", _vehiclesClassLists];
 
+
+["AZM_CBAOptionMiclic", "TIME",  ["Rearm time", "AZM Miclic rearm time"], "AZM Miclic", [1, 60, 5], 1] call CBA_fnc_addSetting;
