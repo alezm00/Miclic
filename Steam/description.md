@@ -5,22 +5,22 @@ I wrote most of the code myself, though I took inspiration from some similar scr
 [list]
     [*]Miclic launch with ammo count (unrealistic but easier)
     [*]Option to Detonate or Cut the line
-    [*]Full ACE interaction compatible
+    [*]Fully ACE interaction compatible
     [*]Ability to creare rearm positions
 [/list]
 
-[url=https://github.com/alezm00/Miclic] GITHUB [/url]
+[url=https://github.com/alezm00/Miclic] GitHub Repository [/url]
 
 [hr][/hr]
 [h1]Known issues:[/h1]
 [list]
-	[*]sometimes the explosions are all at the end of the rope... FYI tensioning the rope by backing a meter or 2 seems to fix it
+	[*]Sometimes the explosions all occur at the end of the rope. FYI: Tensioning the rope by backing up a meter or two usually fixes it.
 [/list]
 
 [hr][/hr]
 [h2]List of supported Vehicles[/h2]
-At the moment the mods supports a few of arma 3 base vehicles and most of the Mraps from RHSUSAF.
-If you want to add your own custom vehicle you could make a compatibility addon or a pull request on the public [url=https://github.com/alezm00/Miclic] github page [/url]
+At the moment, the mod supports a few Arma 3 base vehicles and most of the MRAPs from RHSUSAF.
+If you want to add your own custom vehicle, you can create a compatibility addon or submit a pull request on the public [url=https://github.com/alezm00/Miclic] github page [/url]
 
 
 [table]
@@ -53,10 +53,10 @@ If you want to add your own custom vehicle you could make a compatibility addon 
 
 [h1]Support[/h1]
 
-For any problem you can leave a comment 
-or add me on Discord i will respond as soon as possible
-[B]alezm#4179[/B]
+If you run into any issues, feel free to leave a comment or add me on Discord — I’ll respond as soon as possible:
+[B]alezm#4179 (old discord format)[/B]
+[B]alezm[/B]
 
 [url=https://alezm.io/]alezm.io[/url]
-[url=https://www.paypal.me/alezm00]Donations are well accepted thx love u[/url]
+[url=https://www.paypal.me/alezm00]Support me on PayPal[/url] – donations are very appreciated, love you!
 
