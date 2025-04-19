@@ -54,7 +54,7 @@ class CfgVehicles {
 			class ModuleDescription: ModuleDescription {};
 		};
 		class ModuleDescription: ModuleDescription {
-			description = "Synched objects become Miclic rearm points";
+			description = "Synchronized objects become Miclic rearm points";
 		};
 	};
 };

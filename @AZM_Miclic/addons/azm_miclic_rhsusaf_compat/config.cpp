@@ -63,28 +63,13 @@ class AZM_miclic_config {
 			bagLaunchPoint[] = {-0.714,-1.842,0.382};
 		};
         class rhsusf_M1230_MK19_usarmy_d : rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_usarmy_d: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_M2_usarmy_d: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_MK19_usarmy_d: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1237_M2_usarmy_d: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1237_MK19_usarmy_d: rhsusf_M1230_M2_usarmy_d {};
-
 		class rhsusf_M1230_M2_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
         class rhsusf_M1230_MK19_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_M2_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_MK19_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1237_M2_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1237_MK19_usarmy_wd: rhsusf_M1230_M2_usarmy_d {};
-
-        class rhsusf_M1232_MC_M2_usmc_d: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_MC_MK19_usmc_d: rhsusf_M1230_M2_usarmy_d {};
-
-        class rhsusf_M1232_MC_M2_usmc_wd: rhsusf_M1230_M2_usarmy_d {};
-        class rhsusf_M1232_MC_MK19_usmc_wd: rhsusf_M1230_M2_usarmy_d {};
-
 	};
 };
+
+
+
 
 
 
