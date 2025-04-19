@@ -9,6 +9,8 @@ I wrote most of the code myself, though I took inspiration from some similar scr
     [*]Ability to creare rearm positions
 [/list]
 
+[url=https://github.com/alezm00/Miclic] GITHUB [/url]
+
 [hr][/hr]
 [h1]Known issues:[/h1]
 [list]
