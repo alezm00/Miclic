@@ -117,9 +117,10 @@ AZM_miclic_detonate = {
 		private _temp = createVehicle [_explosionType, _ropeEnd select 1, [], 0, "CAN_COLLIDE"];
 		_temp setDamage 1;
 		[_ropeEnd select 1] call AZM_miclic_WallHandler;
-		// ropeCut [_rope,ropeLength _rope-10];
 
-        [_rope,ropeLength _rope-10] remoteExec ["ropeCut",0];
+
+		ropeCut [_rope,ropeLength _rope-10];
+        [_rope,ropeLength _rope-10] remoteExec ["ropeCut",-(owner player)];
 
 
 		sleep _explosionIntervals;
