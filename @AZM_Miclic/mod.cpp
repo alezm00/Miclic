@@ -1,7 +1,7 @@
 name = "AZM Miclic";
 picture = "";
 actionName = "Website";
-action = "https://github.com/alezm00";
+action = "https://github.com/alezm00/Miclic";
 description = "";
 logo = "";
 logoOver = "";
