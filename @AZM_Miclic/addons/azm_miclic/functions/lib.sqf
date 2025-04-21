@@ -34,7 +34,7 @@ AZM_miclic_getVehicleConfig = {
 	};
 	if (_vehicle == "") exitWith {["Error missing input 0000x1"] call AZM_miclic_hint; false};
 	_config = "configName _x == _vehicle" configClasses (configFile >> "AZM_miclic_config" >> "AZM_miclic_vehiclesClasses"); //TODO replace configFile to configFile
-	if (count _config == 0) exitWith {["Error not found 0000x7"] call AZM_miclic_hint; false};
+	if (count _config == 0) exitWith {false};
 
 	[
 		getArray((_config select 0) >> "ropeStartPosition"),
