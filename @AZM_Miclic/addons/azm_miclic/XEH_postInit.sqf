@@ -2,7 +2,7 @@
 
 missionNamespace setVariable ["AZM_miclic_var_ropeAddSafety", getNumber (ConfigFile >> "AZM_miclic_config" >> "ropeAddSafety")];
 missionNamespace setVariable ["AZM_miclic_var_explosionSpeed", getNumber (ConfigFile >> "AZM_miclic_config" >> "explosionSpeed")];
-
+missionNamespace setVariable ["AZM_miclic_var_ropeCutStep", getNumber (ConfigFile >> "AZM_miclic_config" >> "ropeCutStep")];
 
 
 // pregenerate the list of vehicles classes to use it in condition so i dont have to call the config file every time

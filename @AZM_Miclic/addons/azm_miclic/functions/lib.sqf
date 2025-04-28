@@ -10,16 +10,18 @@ AZM_miclic_Light = {
 AZM_miclic_WallHandler = {
     params [
         ["_pos",[0,0,0],[[]]],
-        ["_range",15,[0]]
+        ["_range",random [8,15,20],[0]]
     ];
 
-    _walls = nearestTerrainObjects [_pos,["FENCE","WALL","TREE", "SMALL TREE", "BUSH"],_range];
-    _walls = _walls apply {
+    private _walls = nearestTerrainObjects [_pos,["FENCE","WALL","TREE", "SMALL TREE", "BUSH"],_range];
+    private _mines = nearestObjects [_pos,["MineBase"],_range];
+    private _merged = _walls + _mines;
+    _merged = _merged apply {
         _damage = if (_x distance _pos > (_range/2)) then {0.9} else {1};
         _x setDamage _damage;
         _damage;
     };
-    _walls
+    _merged
 };
 
 

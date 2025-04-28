@@ -7,7 +7,8 @@ class AZM_miclic_config {
 	bagVectorDIR[] = {0, -0.5, 0.75};
 	bagVectorUP[] = {0, -0.75, -0.5};
     ropeAddSafety = 30; //the script will add this to the rope length for safety reasons
-    explosionSpeed = 0.25; //speed of the explosion
+    explosionSpeed = 0.15; //speed of the explosion
+    ropeCutStep = 5;
 
 	class AZM_miclic_vehiclesClasses {
 

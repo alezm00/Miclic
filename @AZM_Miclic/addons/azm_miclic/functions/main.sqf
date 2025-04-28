@@ -111,7 +111,8 @@ AZM_miclic_detonate = {
 
     private _explosionIntervals = missionNamespace getVariable ["AZM_miclic_var_explosionSpeed", 1];
     private _safeDistance = missionNamespace getVariable ["AZM_miclic_var_safeDistance", 30];
-	for "_i" from (ropeLength _rope) to 20 step -10 do {
+    private _ropeStep = missionNamespace getVariable ["AZM_miclic_var_ropeCutStep", 5];
+	for "_i" from (ropeLength _rope) to 20 step -_ropeStep do {
 		if (ropeLength _rope < _safeDistance) exitWith {break;};
 		private _ropeEnd = ropeEndPosition _rope;
 		private _temp = createVehicle [_explosionType, _ropeEnd select 1, [], 0, "CAN_COLLIDE"];
@@ -119,8 +120,8 @@ AZM_miclic_detonate = {
 		[_ropeEnd select 1] call AZM_miclic_WallHandler;
 
 
-		ropeCut [_rope,ropeLength _rope-10];
-        [_rope,ropeLength _rope-10] remoteExec ["ropeCut",-(owner player)];
+		ropeCut [_rope,ropeLength _rope-_ropeStep];
+        [_rope,ropeLength _rope-_ropeStep] remoteExec ["ropeCut",-(owner player)];
 
 
 		sleep _explosionIntervals;
