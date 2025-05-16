@@ -37,6 +37,20 @@ class AZM_miclic_config {
             ropeStartPosition[] = {0,-1.77,-0.175};
 			bagLaunchPoint[] = {0,-1.77,0};
         };
+        class OPTRE_M808R_Engineer_UNSC: trebuchetConfig {
+            ropeStartPosition[] = {2.041,0.994,-0.359};
+			bagLaunchPoint[] = {2.041,0.994,-0.2};
+        };
+        // class optre_catfish_unarmed_f: trebuchetConfig {
+        //     ropeStartPosition[] = {0.258,-2.436,-0.242};
+		// 	bagLaunchPoint[] = {0.258,-2.436,0};
+        // };
+
+        class OPTRE_M493_AIE: trebuchetConfig {
+            ropeStartPosition[] = {0.029,-2.709,2.775};
+			bagLaunchPoint[] = {0.029,-2.709,2.775};
+        };
+        class OPTRE_M493_AIE_RCWS: OPTRE_M493_AIE {};
 
 	};
 };
