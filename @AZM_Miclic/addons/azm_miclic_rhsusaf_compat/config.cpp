@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = 1.0;
-        requiredAddons[] = {"cba_main","ace_main","azm_miclic"};
+        requiredAddons[] = {"cba_main","ace_main","azm_miclic","rhsusf_c_Caiman"};
         skipWhenMissingDependencies = 1;
         version = 1.0;
         authors[] = {"Alezm"};

@@ -28,7 +28,7 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 
 
 
-| Supported Vehicle Classname           |
+| Supported Vehicle Classname          |
 |--------------------------------------|
 | B_APC_Tracked_01_CRV_F               |
 | B_APC_Tracked_01_rcws_F              |
@@ -36,6 +36,9 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 | B_T_APC_Tracked_01_CRV_F             |
 | B_APC_Wheeled_01_cannon_F            |
 | B_T_APC_Wheeled_01_cannon_F          |
+
+| Supported Vehicle Classname  RHSUSAF |
+|--------------------------------------|
 | rhsusf_M1220_M2_usarmy_d             |
 | rhsusf_M1220_MK19_usarmy_d           |
 | rhsusf_M1220_M153_MK19_usarmy_d      |
@@ -52,6 +55,14 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 | rhsusf_M1230_MK19_usarmy_wd          |
 | rhsusf_M1237_M2_usarmy_wd            |
 | rhsusf_M1237_MK19_usarmy_wd          |
+
+
+| Supported Vehicle Classname           |
+|--------------------------------------|
+| OPTRE_M914_RV                        |
+
+
+
 
 # Support
 

@@ -33,6 +33,13 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 [tr][td]B_T_APC_Tracked_01_CRV_F[/td][/tr]
 [tr][td]B_APC_Wheeled_01_cannon_F[/td][/tr]
 [tr][td]B_T_APC_Wheeled_01_cannon_F[/td][/tr]
+[/table]
+
+
+[table]
+[tr]
+    [th]Supported Vehicle Classname RHSUSAF[/th]
+[/tr]
 [tr][td]rhsusf_M1220_M2_usarmy_d[/td][/tr]
 [tr][td]rhsusf_M1220_MK19_usarmy_d[/td][/tr]
 [tr][td]rhsusf_M1220_M153_MK19_usarmy_d[/td][/tr]
@@ -50,6 +57,15 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 [tr][td]rhsusf_M1237_M2_usarmy_wd[/td][/tr]
 [tr][td]rhsusf_M1237_MK19_usarmy_wd[/td][/tr]
 [/table]
+
+
+[table]
+[tr]
+    [th]Supported Vehicle Classname Operation TREBUCHET[/th]
+[/tr]
+[tr][td]OPTRE_M914_RV[/td][/tr]
+[/table]
+
 
 [h1]Support[/h1]
 
