@@ -60,6 +60,9 @@ If you want to add your own custom vehicle, you can create a compatibility addon
 | Supported Vehicle Classname           |
 |--------------------------------------|
 | OPTRE_M914_RV                        |
+| OPTRE_M808R_Engineer_UNSC            |
+| OPTRE_M493_AIE                       |
+| OPTRE_M493_AIE_RCWS                  |
 
 
 
