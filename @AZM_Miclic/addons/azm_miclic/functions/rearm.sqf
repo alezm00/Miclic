@@ -1,3 +1,45 @@
+
+AZM_miclic_addRearmAction = {
+    params [
+        ["_object", objNull, [objNull]],
+        ["_actionPath",[],[[]]],//"ACE_MainActions"
+        ["_actionCoordinates",[0,0,1],[[]]]
+    ];
+    if (isNull _object) exitWith {false};
+
+    _insertChildren = {
+        params ["_target", "_player", "_params"];
+
+        private _vehicleList = (nearestObjects [_player, ["Car", "Tank", "LandVehicle"], 20]) select {
+            (typeOf _x) in (missionNamespace getVariable ["AZM_miclic_var_vehiclesClassLists",[]])
+        };
+
+
+        // Add children to this action
+        private _actions = [];
+        {
+            //AZM_miclic_rearmVehicle
+            private _actionName = format ["Rearm: %1 (%2m)",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName"), floor (_x distance _player)];
+            private _action = [
+                _x,
+                _actionName,
+                getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "Icon"),
+                AZM_miclic_rearmVehicle,
+                {true},
+                {},
+                _x
+            ] call ace_interact_menu_fnc_createAction;
+            _actions pushBack [_action, [], _target]; // New action, it's children, and the action's target
+        } forEach _vehicleList;
+
+        _actions
+    };
+    private _action = ["AZM_Miclic_rearm","Miclic rearm","",{true},{true},_insertChildren,[], _actionCoordinates, 15] call ace_interact_menu_fnc_createAction;
+    [_object, 0, _actionPath, _action] call ace_interact_menu_fnc_addActionToObject;
+};
+
+
+
 AZM_miclic_rearmModule = {
     params [
         ["_logic", objNull, [objNull]],		// Argument 0 is module logic
@@ -7,38 +49,9 @@ AZM_miclic_rearmModule = {
 
     // Module specific behavior. Function can extract arguments from logic and use them.
     if (_activated) then {
-        _insertChildren = {
-            params ["_target", "_player", "_params"];
-
-            private _vehicleList = (nearestObjects [_player, ["Car", "Tank", "LandVehicle"], 20]) select {
-                (typeOf _x) in (missionNamespace getVariable ["AZM_miclic_var_vehiclesClassLists",[]])
-            };
-
-
-            // Add children to this action
-            private _actions = [];
-            {
-                //AZM_miclic_rearmVehicle
-                private _actionName = format ["Rearm: %1 (%2m)",getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "displayName"), floor (_x distance _player)];
-                private _action = [
-                    _x,
-                    _actionName,
-                    getText (configFile >> "CfgVehicles" >> (typeOf _x) >> "Icon"),
-                    AZM_miclic_rearmVehicle,
-                    {true},
-                    {},
-                    _x
-                ] call ace_interact_menu_fnc_createAction;
-                _actions pushBack [_action, [], _target]; // New action, it's children, and the action's target
-            } forEach _vehicleList;
-
-            _actions
-        };
         {
-            private _action = ["AZM_Miclic_rearm","Miclic rearm","",{true},{true},_insertChildren,[], [0,0,1], 15] call ace_interact_menu_fnc_createAction;
-            [_x, 0, [], _action] call ace_interact_menu_fnc_addActionToObject;
+            [_x] call AZM_miclic_addRearmAction;
         } forEach (synchronizedObjects _logic);
-
     };
     // Module function is executed by spawn command, so returned value is not necessary, but it is good practice.
     true;
