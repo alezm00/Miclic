@@ -45,7 +45,7 @@ class CfgVehicles {
 
 	class azmModule_rearm: azmModuleBase {
 		scope = 2; //editor visible
-		isGlobal = 0; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
+		isGlobal = 1; // 0 for server only execution, 1 for global execution, 2 for persistent global execution
 		isTriggerActivated = 0; //wait till all synched triggers are active
 
 		displayName = "Miclic Rearm Point";
